@@ -1,0 +1,170 @@
+* {
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #ccafaf;
+  margin: 0;
+  padding: 0;
+}
+
+.container-fluid{
+  box-shadow: 5px 6px 9px rgb(135, 223, 214, 0.35) ;
+  border-radius: 10px;
+  width: 70%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  padding: 0;
+}
+
+h2{
+  background-color: #204051;
+  color: #f1f1f1;
+  text-align: center;
+  padding: 10px 0;
+  margin: 0;
+  font-family: 'Roboto Slab', serif;
+}
+
+.container{
+  background-color: #e4f9ff;
+  padding: 10px 20px;
+}
+
+form{
+  padding: 20px 0;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.row{
+  margin: 2% 0;
+}
+
+label{
+  margin: auto 0;
+  font-size: 0.9rem;
+  color: #900c3f;
+}
+.asterisk{
+  color: red;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    /* -webkit-text-fill-color: #ccafaf !important; */
+}
+
+.form-control, .form-control[readonly]{
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+  border-bottom: solid 1px #0fabbc;
+  border-radius: 0;
+  font: inherit;
+  font-size: 0.8rem;
+}
+
+.form-control:focus{
+  background-color: transparent;
+  -webkit-box-shadow: 0 5px 6px -6px #0fabbc;
+      -moz-box-shadow: 0 5px 6px -6px #0fabbc;
+           box-shadow: 0 5px 6px -6px #0fabbc;
+}
+
+.height{
+  display: flex;
+  padding: 0;
+}
+
+#result{
+  margin: 0 3%;
+}
+
+#feet{
+  margin-right: 2%;
+}
+
+.box-container{
+  display: flex;
+}
+
+.box{
+  flex-basis: 25%;
+  font-size: 0.9rem;
+  text-align: center;
+  color: #f1f1f1;
+  margin: 1% 0.5%;
+  padding: 2% 0;
+  transition: flex-basis 800ms ease-in-out;
+}
+
+.yellow{
+  background-color: #ffa931;
+}
+
+.green{
+  background-color: #3ca59d;
+}
+
+.orange{
+  background-color: #ff4301;
+}
+
+.red{
+  background-color: #fa1616;
+}
+
+.box.active{
+  cursor: pointer;
+  flex-basis: 80%;
+}
+
+
+/************************       Media QUERIES       ***************************************************/
+@media only screen and (max-width:768px) {
+  form{
+    width: 90%;
+  }
+
+  .row{
+    margin: 5% 0;
+  }
+
+  .form-control{
+    padding: 0;
+  }
+
+  label.col-md-2{
+    padding-left: 0;
+  }
+
+  #result{
+    margin: 3% 0;
+  }
+
+  .box{
+    display: none;
+  }
+
+  .box.smallscreen{
+    display: block;
+    border-radius: 0.25rem;
+    flex-basis: 25%;
+    opacity: 0;
+    margin: -3% auto 2%;
+    transition: flex-basis opacity 800ms ease-in-out;
+  }
+
+  .box.smallscreen.trans{
+    flex-basis: 90%;
+    opacity: 1;
+  }
+
+}
