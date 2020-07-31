@@ -4,8 +4,6 @@ $(window).on("load", function(){
     bmiForm.addEventListener("submit", function(e){
         e.preventDefault();
 
-        
-
         if ($('.box').hasClass('active')){
           var activeBox = $('.box.active');
           activeBox.removeClass('active');
@@ -16,6 +14,9 @@ $(window).on("load", function(){
           activeBox.removeClass('smallscreen trans');
         }
 
+        var bmi = bmiForm.result.value;
+        console.log(bmi);
+        
         if (bmi < 18.5)
           addEffects('.yellow');
         else if (bmi >= 18.5 && bmi < 25)

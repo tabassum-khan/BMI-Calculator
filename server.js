@@ -10,7 +10,7 @@ const port = 3000;
 app.use(bodyParser.urlencoded({extended : true}));
 
 //add static pages
-app.use(express.static('public'));
+app.use(express.static('public/'));
 
 //set teh view engine to ejs by letting the express server know
 app.set('view engine', 'ejs'); //by default it look for files in the views folder
@@ -24,17 +24,24 @@ app.get("/index.html", function(req, res){
   res.sendFile(__dirname + "/index.html");
 });
 
-// app.post("/", function(req, res){
-//   var weight = req.body.weight;
-//   var feet = req.body.feet;
-//   var inches = req.body.inches;
+app.post("/", function(req, res){
+  var weight = req.body.weight;
+  var feet = req.body.feet;
+  var inches = req.body.inches;
 
-//   var height =  ((feet*12) + inches) * 0.0254;
-//   var bmi = weight/(height*height);
-//   console.log(bmi);
+  var height =  ((feet*12) + inches) * 0.0254;
+  var bmi = (weight/(height*height)) * 100;
+  console.log(weight+ ", " + bmi);
 
-//   res.render('index');
-// });
+  var data = {
+    weight : weight,
+    feet : feet,
+    inches: inches, 
+    bmi : bmi
+  };
+
+  res.render('index', {data: data});
+});
 
 
 app.listen(port, () => console.log("Server has started on port 3000"));
