@@ -13,12 +13,25 @@ A basic web project that calculates BMI(Body Mass Index) of a person using the m
 > **BMI = weight** (in kgs) **/ (height*height)** (in m)
 
 If your BMI is: 
-  - below 18.5 – you're in the underweight range. Represented in yellow.
-  - between 18.5 and 24.9 – you're in the healthy weight range. Represented in blue.
-  - between 25 and 29.9 – you're in the overweight range. Represented in orange.
-  - above 29.9 – you're in the obese range. Represented in red.
+  - **below 18.5** – you're in the underweight range. Represented in yellow.
+  - **between 18.5 and 24.9** – you're in the healthy weight range. Represented in blue.
+  - **between 25 and 29.9** – you're in the overweight range. Represented in orange.
+  - **above 29.9** – you're in the obese range. Represented in red.
 
 ## Project Screenshots 
+
+##### 1. BMI Full Screen without inputs
+![BMI Full screen](/assets/bmi-full.png)
+
+##### 2. BMI Full Screen with inputs
+![BMI Full screen with Inputs](/assets/bmi-full-with-inputs.png)
+
+##### 3. BMI Responsive - Mobile without inputs
+![BMI Mobile screen](/assets/bmi-mobile.png)
+
+##### 4. BMI Responsive - Mobile with inputs
+![BMI Mobile screen with Inputs](/assets/bmi-mobile-with-inputs.png)
+
 
 
 ## Download and Usage
