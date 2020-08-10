@@ -14,7 +14,15 @@ $(window).on("load", function(){
           activeBox.removeClass('smallscreen trans');
         }
 
-        var bmi = bmiForm.result.value;
+        var weight = bmiForm.weight.value;
+        var feet = bmiForm.feet.value;
+        var inches = bmiForm.inches.value;
+
+        var height =  ((feet*12) + inches) * 0.0254;
+        var bmi = (weight/(height*height)) * 100;
+
+        $("#result").val(bmi);
+
         console.log(bmi);
         
         if (bmi < 18.5)
